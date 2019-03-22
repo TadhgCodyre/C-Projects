@@ -1,0 +1,115 @@
+#include "stdafx.h"
+#include "stdio.h"
+
+#define Triangle 1
+#define Rectangle 2
+#define Trapezium 3
+#define Ellipse 4
+#define Square 5
+#define Parallelogram 6
+#define Circle 7
+#define Sector 8
+#define PI 3.14159
+
+void main()
+{
+	char shape;
+	float area;
+
+
+	printf("Area Calculator ");
+	printf("Enter Choice: ");
+	printf("1 - Triangle");
+	printf("2 - Rectangle");
+	printf("3 - Trapezium");
+	printf("4 - Ellipse");
+	printf("5 - Square");
+	printf("6 - Parallelogram");
+	printf("7 - Circle");
+	printf("8 - Sector");
+	printf("Choice: %d");
+	printf("Area = %d \n");
+	scanf("%d", shape);
+
+	switch (shape)
+	{
+	case Triangle:
+		float base;
+		float height;
+		printf("Enter base width: %d \n");
+		scanf("%d", &base);
+		printf("Enter vertical height: \n");
+		scanf("%d", &height);
+		area = (1 / 2)*(base*height);
+		printf("Area of triangle  = %.2f \n", area);
+		break;
+
+	case Rectangle:
+		float width;
+		float height;
+		printf("Enter width: %d \n");
+		scanf("%d", &width);
+		printf("Enter height: %d \n");
+		scanf("%d", &height);
+		area = (width)*(height);
+		printf("Area of Rectangle = %.2f \n", area);
+		break;
+
+	case Trapezium:
+		float Twidth;
+		float Bwidth;
+		float height;
+		printf("Enter Top Width: %d \n");
+		scanf("%d", &Twidth);
+		printf("Enter Base Width: %d \n");
+		scanf("%d", &Bwidth);
+		printf("Enter Vertical Height: %d \n");
+		scanf("%d, &height");
+		area = (1 / 2)*(Twidth + Bwidth)*height;
+		printf("Area of Trapezium = %.2f \n");
+		break;
+
+	case Ellipse:
+		float Majradius;
+		float Minradius;
+		printf("Enter Major Radius: %d \n");
+		scanf("&d", &Majradius);
+		printf("Enter Minor Radius: %d \n");
+		scanf("%d", &Minradius);
+		area = (PI)*(Majradius)*(Minradius);
+		printf("Area of Ellipse = %.2f \n");
+		break;
+
+	case Square:
+		float side;
+		printf("Enter length of side: %d \n");
+		scanf("%d", &side);
+		area = (side)*(side);
+
+	case Parallelogram:
+		float base;
+		float height;
+		printf("Enter Base: %d \n");
+		scanf("%d", &base);
+		printf("Enter Vertical Height");
+		scanf("%d", &height);
+		area = (base)*(height);
+		printf("Area of Parallelogram = %.2f \n");
+
+	case Circle:
+		float radius;
+		printf("Enter radius: %d \n");
+		scanf("%d", &radius);
+		area = (PI)*(radius*radius);
+
+	case Sector:
+		float radius;
+		float angle;
+		printf("Enter radius: %d \n");
+		scanf("%d", &radius);
+		printf("Enter Angle in Radians: %d \n");
+		scanf("%d", &angle);
+		area = (1 / 2)*(radius*radius)*(angle);
+		printf("Area of Sector = %.2f \n");
+	}
+}
